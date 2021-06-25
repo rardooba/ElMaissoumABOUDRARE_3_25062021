@@ -1,11 +1,15 @@
 {
   "name": "elmaissoumaboudrare_3_25062021",
   "version": "1.0.0",
-  "description": "",
+  "description": "OPCLR Projet 3 OhMyFood",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style expanded",
     "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rardooba/ElMaissoumABOUDRARE_3_25062021.git"
   },
   "author": "",
   "license": "ISC",
