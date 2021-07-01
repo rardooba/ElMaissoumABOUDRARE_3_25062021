@@ -1,0 +1,32 @@
+// Principales
+$primary-color: #9356dc!default;
+$secondary-color: #ff79da!default;
+$tertiary-color: #99e2d0!default;
+
+// Utilitaires Couleurs
+$bg-gradient: linear-gradient(to bottom, $secondary-color, $primary-color);
+$bg-gradient-btn: linear-gradient(to top, $primary-color 0%, $secondary-color 50%, $primary-color 100%);
+$bg-body: #fff!default;
+$bg-grey-light: #f6f6f6!default;
+$bg-grey-mid: #eaeaea!default;
+$bg-grey-dark: #353535!default;
+$bg-new: #99e2d0!default;
+
+$icon-step-color: #7e7e7e!default;
+
+$header-shadow: 0px 3px 5px 0px rgba(53, 53, 53, 0.2);
+$shadow-box: 0px 3px 15px 0px rgba(126, 126, 126, 0.3);
+$shadow-btn: 0px 3px 10px 0px rgba(53, 53, 53, 0.2);
+
+// Textes
+$base-font-size: 16px!default;
+$txt-logo: #101010!default;
+$txt-para: #000!default;
+$txt-white: #fff!default;
+$txt-new: #008766!default;
+
+// Utilitaires Position / Dimensions
+$radius-btn: 25px;
+$radius-box: 10px;
+$radius-number: 20px;
+$padding-txt: 10px;

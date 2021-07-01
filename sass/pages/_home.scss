@@ -1,0 +1,280 @@
+/*-----------------------------------*\
+                                HOME
+\*-----------------------------------*/
+/*------------------------*\
+            HEADER
+\*------------------------*/
+
+.header_logo {
+    font-size: 1.7rem;
+    color: $txt-logo;
+}
+
+/*---------------------------*\
+            LOCATION
+\*---------------------------*/
+
+.location_container {
+    @include flex-center;
+    position: relative;
+    height: rem(50);
+    z-index: 1;
+
+    .map-icon {
+    @include absolute-el(16px, 0, 0, 25vw, 0, 0);
+    width: rem(13);
+    font-size: 0.9rem;
+    color: $bg-grey-dark;
+    }
+
+    input {
+        @extend %typoRoboto;
+        font-weight: bold;
+        font-size: 0.9rem;
+        text-align: center;
+        height: rem(50);
+        width: 100vw;
+        border: none;
+        background: $bg-grey-mid; 
+    }
+}
+
+/*---------------------------*\
+            SEARCH
+\*---------------------------*/
+
+.search {
+    @include flex-center;
+    flex-direction: column;
+    padding: rem(30);
+    background: $bg-grey-light;
+    &_title {
+    text-align: center;
+    width: 75vw;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: rem(10);
+    }
+    &_sub {
+    width: 90vw;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: $icon-step-color;
+    margin-bottom: rem(25);
+    }
+}
+
+.btn {
+    cursor: pointer;
+    margin: rem(10);
+    padding: rem(15) rem(20);
+    text-align: center;
+    transition: 0.5s;
+    background-size: auto 200%;
+    color: $txt-white;
+    box-shadow: $shadow-btn;
+    border-radius: $radius-btn;
+    background-image: $bg-gradient-btn;
+    background-position: bottom center;
+    border: none;
+
+    &:hover {
+        background-position: top center;
+        box-shadow: 0px 3px 10px 0px rgb(53 53 53 / 50%);;
+    }
+}
+
+/*---------------------------*\
+            STEP BOX
+\*---------------------------*/
+
+.box-step {
+    display: flex;
+    flex-direction: column;
+    padding: rem(30) 0;
+
+    &_title {
+        padding-left: rem(20);
+        font-size: 1.3rem;
+    }
+}
+
+.step {
+    @include flex-center;
+    flex-direction: column;
+
+    &_box--clickable {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+    }
+
+    &_container {
+        @include flex-center;
+        position: relative;
+        margin: rem(25) auto;
+    }
+
+    &_numb {
+        @include flex-center;
+        position: relative;
+        top: 30%;
+        left: 3%;
+        width: rem(20);
+        height: rem(20);
+        background: $primary-color;
+        border-radius: rem(20);
+        color: $txt-white;
+        font-size: 0.8rem;   
+    }
+
+    &_descr {
+        display: flex;
+        background: $bg-grey-light;
+        border-radius: rem(15);
+        width: 85vw;
+        height: 4rem;
+        align-items: center;
+        font-weight: 500;
+        font-size: 0.95rem;
+        box-shadow: $shadow-box;
+            i {
+                color: $icon-step-color;
+                font-size: 1.2rem;
+                margin: rem(0) rem(20) rem(0) rem(25);
+            }
+    }
+}
+
+/*------------------------------*\
+            RESTAURANTS
+\*------------------------------*/
+
+.restaurants_title {
+    padding-left: 1.25rem;
+}
+
+.restaurants_container {
+    @include flex-center;
+    flex-direction: column;
+}
+
+.restaurant {
+    width: 86vw;
+    box-shadow: $shadow-box;
+    border-radius: rem(15);
+    overflow: hidden;
+    position: relative;
+    margin: rem(10) rem(0);
+
+    a {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    &_image {
+        flex-shrink: 0;
+        position: relative;
+        overflow: hidden;
+        height: 20vh;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.restaurant--new {
+    @include absolute-el(12px, 12px, none, none, 0, 0);
+    background: $bg-new;
+    width: 25%;
+    border-radius: rem(2);
+    color: $txt-new;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+    padding: rem(5) rem(0);
+}
+
+.restaurant {
+    
+    &_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: rem(15) rem(10);
+    }
+
+    &_title {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    &_location {
+        font-size: 0.9rem;
+        margin-top: 3px;
+    }
+}
+
+.restaurant_icon {
+    font-size: 1.5rem;
+}
+
+.heart--line {
+    position: absolute;
+    -webkit-text-stroke: 1px #fff;
+    bottom: rem(23);
+}
+
+.heart--color {
+    opacity: 0;
+
+    &:hover {
+        opacity: 1;
+        background: linear-gradient(to top, $secondary-color, $primary-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        cursor: pointer;
+        animation: color;
+        animation-duration: 1s;
+        animation-delay: 0.3s;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+    }
+}
+
+/*------------------------------*\
+            FOOTER
+\*------------------------------*/
+
+.footer_logo {
+    @extend %typoShrikhand;
+    font-size: 1.3rem;
+    color: $txt-white;
+    margin-bottom: 1rem;
+}
+
+.footer_nav {
+    ul {
+        list-style: none;
+        font-size: 0.9rem;
+
+        li {
+            margin-bottom: rem(10);
+
+            i {
+                font-size: 0.7rem;
+                margin-right: rem(5);
+            }
+        }
+    }
+}
+
+.footer_link {
+    color: $txt-white;
+}

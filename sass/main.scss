@@ -1,20 +1,21 @@
-@import "./sass/utilities/variables";
-@import "./sass/utilities/function";
-@import "./sass/utilities/mixins";
-@import "./sass/utilities/placeholders";
+@import "./utilities/variables";
+@import "./utilities/functions";
+@import "./utilities/mixins";
+@import "./utilities/placeholders";
 
-@import "./sass/base/reset";
-@import "./sass/base/base";
-@import "./sass/base/typography";
-@import "./sass/base/animations";
+@import "./base/reset";
+@import "./base/base";
+@import "./base/typography";
+@import "./base/animations";
 
-@import "./sass/layouts/header";
-@import "./sass/layouts/feature";
-@import "./sass/layouts/restaurants";
-@import "./sass/layouts/meal";
-@import "./sass/layouts/footer";
+@import "./layouts/wrapper";
+@import "./layouts/header";
+@import "./layouts/feature";
+@import "./layouts/restaurants";
+@import "./layouts/meal";
+@import "./layouts/footer";
 
-@import "./sass/pages/home";
-@import "./sass/pages/restaurant";
-@import "./sass/pages/shame";
+@import "./pages/home";
+@import "./pages/restaurant";
+@import "./pages/shame";
 

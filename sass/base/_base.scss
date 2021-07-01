@@ -1,0 +1,25 @@
+/*------------------------*\
+            BASE
+\*------------------------*/
+
+html, body {
+    @extend %typoRoboto;
+    font-size: $base-font-size;
+    background: $bg-body;
+}
+
+h1 {
+    @extend %typoShrikhand;
+    @extend %txt-base-color;
+}
+
+p {
+    @extend %typoRoboto;
+    font-size: 0.8rem;
+    @extend %txt-base-color;
+}
+
+a {
+    text-decoration: none;
+    @extend %txt-base-color;
+}

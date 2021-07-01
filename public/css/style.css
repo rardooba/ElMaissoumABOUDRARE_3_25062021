@@ -1,0 +1,579 @@
+.footer_logo, h1 {
+  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+.location_container input, p, html, body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+a, p, h1 {
+  color: #000;
+}
+
+/*----------------------------*\
+            RESET CSS
+\*----------------------------*/
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*------------------------*\
+            BASE
+\*------------------------*/
+html, body {
+  font-size: 16px;
+  background: #fff;
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*--------------------------*\
+            FONTS
+\*--------------------------*/
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../../public/fonts/Shrikhand-Regular.eot");
+  src: url("../../public/fonts/Shrikhand-Regular.eot?#iefix") format("embedded-opentype"), url("../../public/fonts/Shrikhand-Regular.woff") format("woff"), url("../../public/fonts/Shrikhand-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/fonts/Roboto-ThinItalic.eot");
+  src: url("../../public/fonts/Roboto-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../../public/fonts/Roboto-ThinItalic.woff") format("woff"), url("../../public/fonts/Roboto-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/fonts/Roboto-Medium.eot");
+  src: url("../../public/fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../../public/fonts/Roboto-Medium.woff") format("woff"), url("../../public/fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/fonts/Roboto-Bold.eot");
+  src: url("../../public/fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../../public/fonts/Roboto-Bold.woff") format("woff"), url("../../public/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/fonts/Roboto-BlackItalic.eot");
+  src: url("../../public/fonts/Roboto-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../../public/fonts/Roboto-BlackItalic.woff") format("woff"), url("../../public/fonts/Roboto-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/fonts/Roboto-MediumItalic.eot");
+  src: url("../../public/fonts/Roboto-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../../public/fonts/Roboto-MediumItalic.woff") format("woff"), url("../../public/fonts/Roboto-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/fonts/Roboto-Black.eot");
+  src: url("../../public/fonts/Roboto-Black.eot?#iefix") format("embedded-opentype"), url("../../public/fonts/Roboto-Black.woff") format("woff"), url("../../public/fonts/Roboto-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/fonts/Roboto-Regular.eot");
+  src: url("../../public/fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../../public/fonts/Roboto-Regular.woff") format("woff"), url("../../public/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/fonts/Roboto-Italic.eot");
+  src: url("../../public/fonts/Roboto-Italic.eot?#iefix") format("embedded-opentype"), url("../../public/fonts/Roboto-Italic.woff") format("woff"), url("../../public/fonts/Roboto-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/fonts/Roboto-Thin.eot");
+  src: url("../../public/fonts/Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("../../public/fonts/Roboto-Thin.woff") format("woff"), url("../../public/fonts/Roboto-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/fonts/Roboto-LightItalic.eot");
+  src: url("../../public/fonts/Roboto-LightItalic.eot?#iefix") format("embedded-opentype"), url("../../public/fonts/Roboto-LightItalic.woff") format("woff"), url("../../public/fonts/Roboto-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/fonts/Roboto-Light.eot");
+  src: url("../../public/fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../../public/fonts/Roboto-Light.woff") format("woff"), url("../../public/fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/fonts/Roboto-BoldItalic.eot");
+  src: url("../../public/fonts/Roboto-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../../public/fonts/Roboto-BoldItalic.woff") format("woff"), url("../../public/fonts/Roboto-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@keyframes color {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.main-wrapper {
+  width: 100vw;
+  margin: auto;
+}
+
+/*---------------------------*\
+            l-Header
+\*---------------------------*/
+.l-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.4375rem;
+  background: #fff;
+  box-shadow: 0px 3px 5px 0px rgba(53, 53, 53, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.l-restaurants {
+  background: #f6f6f6;
+  padding: 1.875rem 0;
+}
+
+.l-meal {
+  background: #f6f6f6;
+  padding: 1.875rem 0rem 3.125rem 0rem;
+  border-radius: 2.1875rem 2.1875rem 0rem 0rem;
+  z-index: 2;
+  position: relative;
+}
+
+.l-footer {
+  display: flex;
+  flex-direction: column;
+  background: #353535;
+  color: #fff;
+  padding: 1.5625rem 1.25rem;
+}
+
+/*-----------------------------------*\
+                                HOME
+\*-----------------------------------*/
+/*------------------------*\
+            HEADER
+\*------------------------*/
+.header_logo {
+  font-size: 1.7rem;
+  color: #101010;
+}
+
+/*---------------------------*\
+            LOCATION
+\*---------------------------*/
+.location_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 3.125rem;
+  z-index: 1;
+}
+.location_container .map-icon {
+  position: absolute;
+  top: 16px;
+  right: 0;
+  bottom: 0;
+  left: 25vw;
+  transform: translate(0, 0);
+  width: 0.8125rem;
+  font-size: 0.9rem;
+  color: #353535;
+}
+.location_container input {
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-align: center;
+  height: 3.125rem;
+  width: 100vw;
+  border: none;
+  background: #eaeaea;
+}
+
+/*---------------------------*\
+            SEARCH
+\*---------------------------*/
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.875rem;
+  background: #f6f6f6;
+}
+.search_title {
+  text-align: center;
+  width: 75vw;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.625rem;
+}
+.search_sub {
+  width: 90vw;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #7e7e7e;
+  margin-bottom: 1.5625rem;
+}
+
+.btn {
+  cursor: pointer;
+  margin: 0.625rem;
+  padding: 0.9375rem 1.25rem;
+  text-align: center;
+  transition: 0.5s;
+  background-size: auto 200%;
+  color: #fff;
+  box-shadow: 0px 3px 10px 0px rgba(53, 53, 53, 0.2);
+  border-radius: 25px;
+  background-image: linear-gradient(to top, #9356dc 0%, #ff79da 50%, #9356dc 100%);
+  background-position: bottom center;
+  border: none;
+}
+.btn:hover {
+  background-position: top center;
+  box-shadow: 0px 3px 10px 0px rgba(53, 53, 53, 0.5);
+}
+
+/*---------------------------*\
+            STEP BOX
+\*---------------------------*/
+.box-step {
+  display: flex;
+  flex-direction: column;
+  padding: 1.875rem 0;
+}
+.box-step_title {
+  padding-left: 1.25rem;
+  font-size: 1.3rem;
+}
+
+.step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.step_box--clickable {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+}
+.step_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 1.5625rem auto;
+}
+.step_numb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 30%;
+  left: 3%;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: #9356dc;
+  border-radius: 1.25rem;
+  color: #fff;
+  font-size: 0.8rem;
+}
+.step_descr {
+  display: flex;
+  background: #f6f6f6;
+  border-radius: 0.9375rem;
+  width: 85vw;
+  height: 4rem;
+  align-items: center;
+  font-weight: 500;
+  font-size: 0.95rem;
+  box-shadow: 0px 3px 15px 0px rgba(126, 126, 126, 0.3);
+}
+.step_descr i {
+  color: #7e7e7e;
+  font-size: 1.2rem;
+  margin: 0rem 1.25rem 0rem 1.5625rem;
+}
+
+/*------------------------------*\
+            RESTAURANTS
+\*------------------------------*/
+.restaurants_title {
+  padding-left: 1.25rem;
+}
+
+.restaurants_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.restaurant {
+  width: 86vw;
+  box-shadow: 0px 3px 15px 0px rgba(126, 126, 126, 0.3);
+  border-radius: 0.9375rem;
+  overflow: hidden;
+  position: relative;
+  margin: 0.625rem 0rem;
+}
+.restaurant a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.restaurant_image {
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  height: 20vh;
+}
+.restaurant_image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.restaurant--new {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  bottom: none;
+  left: none;
+  transform: translate(0, 0);
+  background: #99e2d0;
+  width: 25%;
+  border-radius: 0.125rem;
+  color: #008766;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.3125rem 0rem;
+}
+
+.restaurant_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9375rem 0.625rem;
+}
+.restaurant_title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.restaurant_location {
+  font-size: 0.9rem;
+  margin-top: 3px;
+}
+
+.restaurant_icon {
+  font-size: 1.5rem;
+}
+
+.heart--line {
+  position: absolute;
+  -webkit-text-stroke: 1px #fff;
+  bottom: 1.4375rem;
+}
+
+.heart--color {
+  opacity: 0;
+}
+.heart--color:hover {
+  opacity: 1;
+  background: linear-gradient(to top, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
+  animation: color;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+/*------------------------------*\
+            FOOTER
+\*------------------------------*/
+.footer_logo {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer_nav ul {
+  list-style: none;
+  font-size: 0.9rem;
+}
+.footer_nav ul li {
+  margin-bottom: 0.625rem;
+}
+.footer_nav ul li i {
+  font-size: 0.7rem;
+  margin-right: 0.3125rem;
+}
+
+.footer_link {
+  color: #fff;
+}
+
+/*------------------------------*\
+            Meals
+\*------------------------------*/
+.header_nav {
+  position: absolute;
+  left: 1.5625rem;
+}
+
+.full-img {
+  height: 20vh;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.full-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.heading_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.25rem 0 1.25rem;
+  margin-bottom: 1.5625rem;
+}
+.heading_icon {
+  position: relative;
+  font-size: 1.6rem;
+}
+
+.meal_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.meal_section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.875rem;
+}
+.meal_label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  padding-left: 0.375rem;
+  margin-bottom: 1.25rem;
+}
+.meal_label span {
+  padding-bottom: 0.25rem;
+  border-bottom: 0.1875rem solid #99e2d0;
+}
+.meal_dish {
+  background: #fff;
+  border-radius: 0.9375rem;
+  width: 93vw;
+  box-shadow: 0px 3px 15px 0px rgba(126, 126, 126, 0.3);
+  padding: 0.625rem 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.meal_dish h3 {
+  font-size: 0.9rem;
+}
+.meal_dish_descr {
+  font-size: 0.9rem;
+  margin-top: 0.1875rem;
+  display: flex;
+  justify-content: space-between;
+}
+.meal_dish_descr p {
+  display: contents;
+}
+.meal_dish_descr p span {
+  display: block;
+  font-weight: 900;
+  font-size: 0.9rem;
+  color: #4e4e4e;
+}
+
+.btn_order {
+  width: 50%;
+  align-self: center;
+  margin-top: 30px;
+}
+.btn_order--hide {
+  display: none;
+}
+
+.heart--line2 {
+  position: absolute;
+  -webkit-text-stroke: 1px #fff;
+  bottom: 0.1875rem;
+}
+
+.heart--color2 {
+  opacity: 0;
+}
+.heart--color2:hover {
+  opacity: 1;
+  background: linear-gradient(to top, #ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
+  animation: color;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,28 @@
+// element absolute centered
+
+@mixin absolute-el($top, $right, $bottom, $left, $x, $y) {
+	position: absolute;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+	transform: translate($x,$y);
+}
+
+//@include absolute-el(50%, 0, 0, 50%, -50%, -50%)
+
+// pseudo element
+
+@mixin pseudo-el($display: block, $pos: absolute, $content: '') {
+	content: $content;
+	display: $display;
+	position: $pos;
+}
+
+// element centered with Flexbox
+
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

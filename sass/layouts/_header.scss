@@ -1,0 +1,11 @@
+/*---------------------------*\
+            l-Header
+\*---------------------------*/
+.l-header {
+    @include flex-center;
+    height: rem(55);
+    background: $bg-body;
+    box-shadow: $header-shadow;
+    position: relative;
+    z-index: 2;
+}
