@@ -1,16 +1,18 @@
+@use 'sass:math';
+
 //convert px to rem > use padding: rem(5) rem(12); and > html, body: font-size: $base-font-size;
 
 @function strip-unit($number) {
     @if type-of($number) == 'number' and not unitless($number) {
-        @return $number / ($number * 0 + 1);
-        //@return math.div($number, ($number * 0 + 1));
+        //@return $number / ($number * 0 + 1);
+        @return math.div($number, ($number * 0 + 1));
     }
   
     @return $number;
 }
   
 @function rem($size, $base: $base-font-size) { 
-    @return 1rem * $size / strip-unit($base);
-    //@return math.div(1rem * $size, strip-unit($base));
+    //@return 1rem * $size / strip-unit($base);
+    @return math.div(1rem * $size, strip-unit($base));
 }
 
