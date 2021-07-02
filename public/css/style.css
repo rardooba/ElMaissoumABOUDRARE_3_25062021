@@ -481,6 +481,7 @@ a {
   z-index: 1;
 }
 .full-img img {
+  position: relative;
   width: 100%;
   object-fit: cover;
 }
@@ -546,13 +547,15 @@ a {
   color: #4e4e4e;
 }
 
-.btn_order {
-  width: 50%;
-  align-self: center;
-  margin-top: 30px;
+.order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.1875rem;
 }
-.btn_order--hide {
-  display: none;
+
+.btn_order {
+  padding: 0.9375rem 2rem;
 }
 
 .heart--line2 {
@@ -597,6 +600,10 @@ a {
   .step_descr {
     width: 50vw;
   }
+
+  .full-img {
+    height: 30vh;
+  }
 }
 /*---------------------------*\
             MEDIUM
@@ -638,6 +645,34 @@ a {
   .restaurant--new {
     width: 15%;
   }
+
+  .l-restaurants {
+    box-shadow: 0px -2px 5px 0px rgba(53, 53, 53, 0.2);
+    position: relative;
+  }
+
+  .full-img {
+    height: 45vh;
+  }
+
+  .meal_container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .meal_section {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0.9375rem;
+  }
+  .meal_section:nth-child(2) {
+    margin-right: 0;
+  }
+
+  .meal_dish {
+    width: 45vw;
+  }
 }
 /*---------------------------*\
             NORMAL
@@ -662,6 +697,29 @@ a {
   }
   .restaurant_image img {
     top: -90px;
+  }
+
+  .full-img {
+    height: 55vh;
+  }
+  .full-img img {
+    top: -26px;
+  }
+
+  .meal_container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .meal_section {
+    margin-right: 0.9375rem;
+  }
+  .meal_section:nth-child(2) {
+    margin-right: 0.9375rem;
+  }
+
+  .meal_dish {
+    width: 30vw;
   }
 }
 /*--------------------------*\
@@ -704,6 +762,10 @@ a {
   }
   .restaurant--new {
     width: 25%;
+  }
+
+  .full-img img {
+    top: -333px;
   }
 }
 

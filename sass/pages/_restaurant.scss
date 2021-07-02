@@ -13,6 +13,7 @@
     z-index: 1;
 
     img {
+        position: relative;
         width: 100%;
         object-fit: cover;
     }
@@ -92,14 +93,13 @@
     }
 }
 
-.btn_order {
-    width: 50%;
-    align-self: center;
-    margin-top: 30px;
+.order {
+    @include flex-center;
+    margin-bottom: rem(35);
+}
 
-    &--hide {
-        display: none;
-    }
+.btn_order {
+    padding: 0.9375rem 2rem;
 }
 
 .heart--line2 {

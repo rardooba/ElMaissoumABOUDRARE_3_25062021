@@ -21,6 +21,13 @@
     .step_descr {
         width: 50vw;
     }
+
+    // meal page
+
+    .full-img {
+        height: 30vh;
+    }
+
 }
 
 /*---------------------------*\
@@ -72,6 +79,37 @@
     .restaurant--new {
         width: 15%;
     }
+
+    // meal page
+
+    .l-restaurants {
+        box-shadow: 0px -2px 5px 0px rgba(53, 53, 53, 0.2);
+        position: relative;
+    }
+
+    .full-img {
+        height: 45vh;
+    }
+    .meal_container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .meal_section {
+        display: flex;
+        flex-direction: column;
+        margin-right: rem(15);
+
+        &:nth-child(2) {
+            margin-right: 0;
+        }
+    }
+
+    .meal_dish {
+        width: 45vw;
+    }
+
 }
 
 /*---------------------------*\
@@ -101,6 +139,34 @@
             top: -90px;
         }
     }
+
+    // meal page
+
+    .full-img {
+        height: 55vh;
+
+        img {
+            top: -26px;
+        }
+    }
+
+    .meal_container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .meal_section {
+        margin-right: rem(15);
+
+        &:nth-child(2) {
+            margin-right: rem(15);
+        }
+    }
+
+    .meal_dish {
+        width: 30vw;
+    }
+
 }
 
 /*--------------------------*\
@@ -152,4 +218,11 @@
             width: 25%;
         }
     }
+
+    // meal page
+
+    .full-img img {
+        top: -333px;
+    }
+
 }
