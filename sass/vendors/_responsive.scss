@@ -1,0 +1,155 @@
+/*--------------------------*\
+            SMALL
+\*--------------------------*/
+
+@media #{$small-up} {
+
+    .box-step_title {
+        text-align: center;
+    }
+
+    .restaurants {
+        &_title {
+            margin-bottom: 15px;
+        }
+    }
+
+	.restaurant_image img {
+        top: -103px;
+    }
+
+    .step_descr {
+        width: 50vw;
+    }
+}
+
+/*---------------------------*\
+            MEDIUM
+\*---------------------------*/
+
+@media #{$medium-up} {
+
+    .location_container .map-icon {
+        left: 39vw;
+    }
+
+	.feature {
+        display: flex;
+        
+        .search {
+            width: 50vw;
+            background: #e4e4e4;
+
+            &_sub {
+                width: 45vw;
+            } 
+        }
+    }
+
+    .box-step {
+        width: 48vw;
+
+        &_title {
+            text-align: center;
+        }
+    }
+
+    .step_descr {
+        width: 40vw;
+    }
+
+    .restaurant {
+
+        &_image img {
+        top: -153px;
+        }
+
+        &_content {
+            padding: 15px;
+        }
+    }
+
+    .restaurant--new {
+        width: 15%;
+    }
+}
+
+/*---------------------------*\
+            NORMAL
+\*---------------------------*/
+
+@media #{$normal-up} {
+
+    .location_container .map-icon {
+        left: 42vw;
+    }
+
+    .step_numb {
+        left: 2%;
+    }
+
+	.restaurants_container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .restaurant {
+        width: 45vw;
+        margin: rem(10) rem(16);
+
+        &_image img {
+            top: -90px;
+        }
+    }
+}
+
+/*--------------------------*\
+            LARGE
+\*--------------------------*/
+
+@media #{$large-up} {
+
+    .location_container .map-icon {
+        left: 45vw;
+    }
+
+	.step_numb {
+        left: 1%;
+    }
+
+    .footer_logo {
+        text-align: center;
+    }
+
+    .footer_nav {
+        ul {
+            display: flex;
+            justify-content: center;
+
+            li {
+                margin: rem(10) rem(18);
+        
+                i {
+                    font-size: 0.9rem; 
+                }
+            }
+        }
+    }
+
+    .step_descr {
+        width: 17vw;
+    }
+
+    .restaurant {
+        width: 20vw;
+        margin: 0.625rem 2rem;
+
+        &_image img {
+            top: -15px;
+        }
+
+        &--new {
+            width: 25%;
+        }
+    }
+}

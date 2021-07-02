@@ -11,35 +11,6 @@
 }
 
 /*---------------------------*\
-            LOCATION
-\*---------------------------*/
-
-.location_container {
-    @include flex-center;
-    position: relative;
-    height: rem(50);
-    z-index: 1;
-
-    .map-icon {
-    @include absolute-el(16px, 0, 0, 25vw, 0, 0);
-    width: rem(13);
-    font-size: 0.9rem;
-    color: $bg-grey-dark;
-    }
-
-    input {
-        @extend %typoRoboto;
-        font-weight: bold;
-        font-size: 0.9rem;
-        text-align: center;
-        height: rem(50);
-        width: 100vw;
-        border: none;
-        background: $bg-grey-mid; 
-    }
-}
-
-/*---------------------------*\
             SEARCH
 \*---------------------------*/
 
@@ -148,6 +119,35 @@
     }
 }
 
+/*---------------------------*\
+            LOCATION
+\*---------------------------*/
+
+.location_container {
+    @include flex-center;
+    position: relative;
+    height: rem(50);
+    z-index: 1;
+
+    .map-icon {
+    @include absolute-el(16px, 0, 0, 25vw, 0, 0);
+    width: rem(13);
+    font-size: 0.9rem;
+    color: $bg-grey-dark;
+    }
+
+    input {
+        @extend %typoRoboto;
+        font-weight: bold;
+        font-size: 0.9rem;
+        text-align: center;
+        height: rem(50);
+        width: 100vw;
+        border: none;
+        background: $bg-grey-mid; 
+    }
+}
+
 /*------------------------------*\
             RESTAURANTS
 \*------------------------------*/
@@ -182,6 +182,8 @@
         height: 20vh;
 
         img {
+            position: relative;
+            top: -44px;
             width: 100%;
             object-fit: cover;
         }
