@@ -1,3 +1,6 @@
+@use "../utilities/functions";
+@use "../utilities/variables";
+
 @keyframes color{
     0%{
         opacity: 0; 
@@ -5,5 +8,33 @@
 
     100%{
         opacity: 1;
+    }
+}
+
+/*------------------------------*\
+            Heart Animate
+\*------------------------------*/
+
+.heart--line {
+    position: absolute;
+    -webkit-text-stroke: 1px #fff;
+    bottom: functions.rem(23);
+}
+
+.heart--color {
+    opacity: 0;
+
+    &:hover {
+        opacity: 1;
+        background: linear-gradient(to top, variables.$secondary-color, variables.$primary-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        cursor: pointer;
+        animation: color;
+        animation-duration: 1s;
+        animation-delay: 0.3s;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
     }
 }

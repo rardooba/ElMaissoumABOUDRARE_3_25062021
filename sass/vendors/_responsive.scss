@@ -1,8 +1,11 @@
+@use "../utilities/functions";
+@use "../utilities/variables";
+
 /*--------------------------*\
-            SMALL
+            SMALL 500px
 \*--------------------------*/
 
-@media #{$small-up} {
+@media #{variables.$small-up} {
 
     .box-step_title {
         text-align: center;
@@ -31,10 +34,10 @@
 }
 
 /*---------------------------*\
-            MEDIUM
+            MEDIUM 700px
 \*---------------------------*/
 
-@media #{$medium-up} {
+@media #{variables.$medium-up} {
 
     .location_container .map-icon {
         left: 39vw;
@@ -99,7 +102,7 @@
     .meal_section {
         display: flex;
         flex-direction: column;
-        margin-right: rem(15);
+        margin-right: functions.rem(15);
 
         &:nth-child(2) {
             margin-right: 0;
@@ -113,10 +116,10 @@
 }
 
 /*---------------------------*\
-            NORMAL
+            NORMAL 1000px
 \*---------------------------*/
 
-@media #{$normal-up} {
+@media #{variables.$normal-up} {
 
     .location_container .map-icon {
         left: 42vw;
@@ -133,7 +136,7 @@
 
     .restaurant {
         width: 45vw;
-        margin: rem(10) rem(16);
+        margin: functions.rem(10) functions.rem(16);
 
         &_image img {
             top: -90px;
@@ -156,10 +159,10 @@
     }
 
     .meal_section {
-        margin-right: rem(15);
+        margin-right: functions.rem(15);
 
         &:nth-child(2) {
-            margin-right: rem(15);
+            margin-right: functions.rem(15);
         }
     }
 
@@ -170,10 +173,10 @@
 }
 
 /*--------------------------*\
-            LARGE
+            LARGE 1440px
 \*--------------------------*/
 
-@media #{$large-up} {
+@media #{variables.$large-up} {
 
     .location_container .map-icon {
         left: 45vw;
@@ -193,7 +196,7 @@
             justify-content: center;
 
             li {
-                margin: rem(10) rem(18);
+                margin: functions.rem(10) functions.rem(18);
         
                 i {
                     font-size: 0.9rem; 

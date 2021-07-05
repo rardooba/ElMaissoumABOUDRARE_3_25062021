@@ -1,4 +1,7 @@
+@use "../utilities/functions";
+@use "../utilities/variables";
+
 .l-restaurants {
-    background: $bg-grey-light;
-    padding: rem(30) 0;
+    background: variables.$bg-grey-light;
+    padding: functions.rem(30) 0;
 }

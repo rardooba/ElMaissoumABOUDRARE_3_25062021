@@ -1,14 +1,16 @@
+@use "../utilities/variables";
+@use "placeholders";
 /*------------------------*\
             BASE
 \*------------------------*/
 
 html, body {
     @extend %typoRoboto;
-    font-size: $base-font-size;
-    background: $bg-body;
+    font-size: variables.$base-font-size;
+    background: variables.$bg-body;
 }
 
-h1 {
+h1, .heading_title {
     @extend %typoShrikhand;
     @extend %txt-base-color;
 }

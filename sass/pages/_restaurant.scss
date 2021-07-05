@@ -1,10 +1,15 @@
+@use "../utilities/functions";
+@use "../utilities/mixins";
+@use "../utilities/variables";
+@use "../base/placeholders";
+
 /*------------------------------*\
             Meals
 \*------------------------------*/
 
 .header_nav {
     position: absolute;
-    left: rem(25);
+    left: functions.rem(25);
 }
 
 .full-img {
@@ -26,7 +31,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 2.25rem 0 1.25rem;
-        margin-bottom: rem(25);
+        margin-bottom: functions.rem(25);
     }
 
     &_icon {
@@ -38,36 +43,36 @@
 .meal {
 
     &_container {
-        @include flex-center;
+        @include mixins.flex-center;
         flex-direction: column;
     }
 
     &_section {
         display: flex;
         flex-direction: column;
-        margin-bottom: rem(30);
+        margin-bottom: functions.rem(30);
     }
 
     &_label {
         font-size: 0.9rem;
         text-transform: uppercase;
         font-weight: normal;
-        padding-left: rem(6);
-        margin-bottom: rem(20);
+        padding-left: functions.rem(6);
+        margin-bottom: functions.rem(20);
 
         span {
-            padding-bottom: rem(4);
-            border-bottom: rem(3) solid $tertiary-color;
+            padding-bottom: functions.rem(4);
+            border-bottom: functions.rem(3) solid variables.$tertiary-color;
         }
     }
 
     &_dish {
-        background: $bg-body;
-        border-radius: rem(15);
+        background: variables.$bg-body;
+        border-radius: functions.rem(15);
         width: 93vw;
-        box-shadow: $shadow-box;
-        padding: rem(10) rem(20);
-        margin-bottom: rem(12);
+        box-shadow: variables.$shadow-box;
+        padding: functions.rem(10) functions.rem(20);
+        margin-bottom: functions.rem(12);
 
         h3 {
             font-size: 0.9rem;
@@ -75,7 +80,7 @@
 
         &_descr {
             font-size: 0.9rem;
-            margin-top: rem(3);
+            margin-top: functions.rem(3);
             display: flex;
             justify-content: space-between;
 
@@ -94,8 +99,8 @@
 }
 
 .order {
-    @include flex-center;
-    margin-bottom: rem(35);
+    @include mixins.flex-center;
+    margin-bottom: functions.rem(35);
 }
 
 .btn_order {
@@ -105,7 +110,7 @@
 .heart--line2 {
     position: absolute;
     -webkit-text-stroke: 1px #fff;
-    bottom: rem(3);
+    bottom: functions.rem(3);
 }
 
 .heart--color2 {
@@ -113,7 +118,7 @@
 
     &:hover {
         opacity: 1;
-        background: linear-gradient(to top, $secondary-color, $primary-color);
+        background: linear-gradient(to top, variables.$secondary-color, variables.$primary-color);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: bold;

@@ -1,7 +1,10 @@
+@use "../utilities/functions";
+@use "../utilities/variables";
+
 .l-footer {
     display: flex;
     flex-direction: column;
-    background: $bg-grey-dark;
-    color: $txt-white;
-    padding: rem(25) rem(20);
+    background: variables.$bg-grey-dark;
+    color: variables.$txt-white;
+    padding: functions.rem(25) functions.rem(20);
 }

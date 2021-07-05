@@ -1,3 +1,8 @@
+@use "../utilities/functions";
+@use "../utilities/mixins";
+@use "../utilities/variables";
+@use "../base/placeholders";
+
 /*-----------------------------------*\
                                 HOME
 \*-----------------------------------*/
@@ -7,7 +12,7 @@
 
 .header_logo {
     font-size: 1.7rem;
-    color: $txt-logo;
+    color: variables.$txt-logo;
 }
 
 /*---------------------------*\
@@ -15,38 +20,40 @@
 \*---------------------------*/
 
 .search {
-    @include flex-center;
+    @include mixins.flex-center;
     flex-direction: column;
-    padding: rem(30);
-    background: $bg-grey-light;
+    padding: functions.rem(30);
+    background: variables.$bg-grey-light;
+
     &_title {
     text-align: center;
     width: 75vw;
     font-size: 1.3rem;
     font-weight: bold;
-    margin-bottom: rem(10);
+    margin-bottom: functions.rem(10);
     }
+
     &_sub {
     width: 90vw;
     text-align: center;
     font-size: 0.9rem;
     font-weight: 400;
-    color: $icon-step-color;
-    margin-bottom: rem(25);
+    color: variables.$icon-step-color;
+    margin-bottom: functions.rem(25);
     }
 }
 
 .btn {
     cursor: pointer;
-    margin: rem(10);
-    padding: rem(15) rem(20);
+    margin: functions.rem(10);
+    padding: functions.rem(15) functions.rem(20);
     text-align: center;
     transition: 0.5s;
     background-size: auto 200%;
-    color: $txt-white;
-    box-shadow: $shadow-btn;
-    border-radius: $radius-btn;
-    background-image: $bg-gradient-btn;
+    color: variables.$txt-white;
+    box-shadow: variables.$shadow-btn;
+    border-radius: variables.$radius-btn;
+    background-image: variables.$bg-gradient-btn;
     background-position: bottom center;
     border: none;
 
@@ -63,16 +70,16 @@
 .box-step {
     display: flex;
     flex-direction: column;
-    padding: rem(30) 0;
+    padding: functions.rem(30) 0;
 
     &_title {
-        padding-left: rem(20);
+        padding-left: functions.rem(20);
         font-size: 1.3rem;
     }
 }
 
 .step {
-    @include flex-center;
+    @include mixins.flex-center;
     flex-direction: column;
 
     &_box--clickable {
@@ -83,38 +90,38 @@
     }
 
     &_container {
-        @include flex-center;
+        @include mixins.flex-center;
         position: relative;
-        margin: rem(25) auto;
+        margin: functions.rem(25) auto;
     }
 
     &_numb {
-        @include flex-center;
+        @include mixins.flex-center;
         position: relative;
         top: 30%;
         left: 3%;
-        width: rem(20);
-        height: rem(20);
-        background: $primary-color;
-        border-radius: rem(20);
-        color: $txt-white;
+        width: functions.rem(20);
+        height: functions.rem(20);
+        background: variables.$primary-color;
+        border-radius: functions.rem(20);
+        color: variables.$txt-white;
         font-size: 0.8rem;   
     }
 
     &_descr {
         display: flex;
-        background: $bg-grey-light;
-        border-radius: rem(15);
+        background: variables.$bg-grey-light;
+        border-radius: functions.rem(15);
         width: 85vw;
         height: 4rem;
         align-items: center;
         font-weight: 500;
         font-size: 0.95rem;
-        box-shadow: $shadow-box;
+        box-shadow: variables.$shadow-box;
             i {
-                color: $icon-step-color;
+                color: variables.$icon-step-color;
                 font-size: 1.2rem;
-                margin: rem(0) rem(20) rem(0) rem(25);
+                margin: functions.rem(0) functions.rem(20) functions.rem(0) functions.rem(25);
             }
     }
 }
@@ -124,27 +131,31 @@
 \*---------------------------*/
 
 .location_container {
-    @include flex-center;
+    @include mixins.flex-center;
     position: relative;
-    height: rem(50);
+    height: functions.rem(50);
     z-index: 1;
 
     .map-icon {
-    @include absolute-el(16px, 0, 0, 25vw, 0, 0);
-    width: rem(13);
+    @include mixins.absolute-el(16px, 0, 0, 25vw, 0, 0);
+    width: functions.rem(13);
     font-size: 0.9rem;
-    color: $bg-grey-dark;
+    color: variables.$bg-grey-dark;
     }
 
     input {
-        @extend %typoRoboto;
+        @extend %typoRoboto !optional;
         font-weight: bold;
         font-size: 0.9rem;
         text-align: center;
-        height: rem(50);
+        height: functions.rem(49);
         width: 100vw;
         border: none;
-        background: $bg-grey-mid; 
+        background: variables.$bg-grey-mid; 
+    }
+
+    input:focus-visible {
+        outline: dotted variables.$secondary-color 1px;
     }
 }
 
@@ -157,22 +168,23 @@
 }
 
 .restaurants_container {
-    @include flex-center;
+    @include mixins.flex-center;
     flex-direction: column;
 }
 
 .restaurant {
     width: 86vw;
-    box-shadow: $shadow-box;
-    border-radius: rem(15);
+    box-shadow: variables.$shadow-box;
+    border-radius: functions.rem(15);
     overflow: hidden;
     position: relative;
-    margin: rem(10) rem(0);
+    margin: functions.rem(10) functions.rem(0);
 
     a {
         width: 100%;
         height: 100%;
         position: absolute;
+        z-index: 2;
     }
 
     &_image {
@@ -191,15 +203,15 @@
 }
 
 .restaurant--new {
-    @include absolute-el(12px, 12px, none, none, 0, 0);
-    background: $bg-new;
+    @include mixins.absolute-el(12px, 12px, unset, unset, 0, 0);
+    background: variables.$bg-new;
     width: 25%;
-    border-radius: rem(2);
-    color: $txt-new;
+    border-radius: functions.rem(2);
+    color: variables.$txt-new;
     font-size: 0.8rem;
     font-weight: 500;
     text-align: center;
-    padding: rem(5) rem(0);
+    padding: functions.rem(5) functions.rem(0);
 }
 
 .restaurant {
@@ -208,7 +220,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: rem(15) rem(10);
+        padding: functions.rem(15) functions.rem(10);
     }
 
     &_title {
@@ -224,30 +236,7 @@
 
 .restaurant_icon {
     font-size: 1.5rem;
-}
-
-.heart--line {
-    position: absolute;
-    -webkit-text-stroke: 1px #fff;
-    bottom: rem(23);
-}
-
-.heart--color {
-    opacity: 0;
-
-    &:hover {
-        opacity: 1;
-        background: linear-gradient(to top, $secondary-color, $primary-color);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: bold;
-        cursor: pointer;
-        animation: color;
-        animation-duration: 1s;
-        animation-delay: 0.3s;
-        animation-timing-function: linear;
-        animation-fill-mode: both;
-    }
+    z-index: 3;
 }
 
 /*------------------------------*\
@@ -257,7 +246,7 @@
 .footer_logo {
     @extend %typoShrikhand;
     font-size: 1.3rem;
-    color: $txt-white;
+    color: variables.$txt-white;
     margin-bottom: 1rem;
 }
 
@@ -267,16 +256,16 @@
         font-size: 0.9rem;
 
         li {
-            margin-bottom: rem(10);
+            margin-bottom: functions.rem(10);
 
             i {
                 font-size: 0.7rem;
-                margin-right: rem(5);
+                margin-right: functions.rem(5);
             }
         }
     }
 }
 
 .footer_link {
-    color: $txt-white;
+    color: variables.$txt-white;
 }

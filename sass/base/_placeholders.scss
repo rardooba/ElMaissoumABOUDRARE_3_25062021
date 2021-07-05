@@ -1,3 +1,7 @@
+@use "../utilities/variables";
+/*---------------------------*\
+            Base Fonts
+\*---------------------------*/
 // element centered with Flexbox
 
 %flex-center {
@@ -22,5 +26,5 @@
 //color para
 
 %txt-base-color {
-	color: $txt-para;
+	color: variables.$txt-para;
 }
