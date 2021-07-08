@@ -69,7 +69,6 @@ $anim-delay: math.div($anim-duration, 3);
 /*-----------------------------------------*\
             Loader Animate (LOGO)
 \*-----------------------------------------*/
-
 .loader-container {
     position: absolute;
     display: flex;
@@ -154,3 +153,91 @@ $anim-delay: math.div($anim-duration, 3);
         
     }
 }
+
+/*------------------------------------*\
+            BOX & CHECK Animate
+\*------------------------------------*/
+@keyframes slide_box {
+    0% {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    40% {
+      transform: translateY(25px);
+      opacity: 0;
+    }
+    60% {
+      transform: translateY(25px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+}
+  
+.meal_box {
+    display: flex;
+    position: relative;
+    border-radius: 15px;
+    background-color: white;
+    margin-bottom: 0.8rem;
+    box-shadow: variables.$shadow-box;
+    overflow: hidden;
+    animation: slide_box 0.4s linear backwards;
+    transition: 1s; 
+}
+
+.meal_box:nth-child(2) {
+    animation: slide_box linear 851.644ms 1s backwards;
+  }
+  
+  .meal_box:nth-child(3) {
+    animation: slide_box linear 1054.24ms 1s backwards;
+  }
+  
+  .meal_box:nth-child(4) {
+    animation: slide_box linear 1255.23ms 1s backwards;
+  }
+  
+  .meal_box:nth-child(5) {
+    animation: slide_box linear 1455.23ms 1s backwards;
+  }
+
+  .box-check {
+    background: variables.$tertiary-color;
+    position: absolute;
+    top: 0;
+    padding: 0 2rem;
+    right: functions.rem(-150);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: content-box;
+  }
+
+  .meal_box:hover .box-check {
+    right: 0%;
+    transition: right 0.4s;
+  }
+
+  .meal_box:hover .box-check_icon {
+    transform: rotate(2turn);
+    transition: transform 0.6s;
+    color: white;
+    font-size: 1.4rem;
+  }
+
+  .meal_box:hover .meal_dish {
+    padding-right: 6.5rem;
+    transition: 0.4s;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    
+    & h3, p {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }

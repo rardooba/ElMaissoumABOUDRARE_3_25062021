@@ -28,7 +28,7 @@
     // meal page
 
     .full-img {
-        height: 30vh;
+        height: 40vh;
     }
 
 }
@@ -144,6 +144,12 @@
 
         &_image img {
             top: -90px;
+            filter: grayscale(1);
+            transition: filter 0.4s ease-in-out;   
+        }
+
+        &:hover .restaurant_image img {
+            filter: grayscale(0);
         }
     }
 
@@ -223,6 +229,12 @@
 
         &_image img {
             top: -15px;
+            filter: grayscale(1);
+            transition: filter 0.4s ease-in-out;   
+        }
+
+        &:hover .restaurant_image img {
+            filter: grayscale(0);
         }
 
         &--new {

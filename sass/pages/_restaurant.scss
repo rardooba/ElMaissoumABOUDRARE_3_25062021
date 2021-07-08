@@ -6,7 +6,6 @@
 /*------------------------------*\
             Meals
 \*------------------------------*/
-
 .header_nav {
     position: absolute;
     left: functions.rem(25);
@@ -68,12 +67,9 @@
 
     &_dish {
         background: variables.$bg-body;
-        border-radius: functions.rem(15);
         width: 93vw;
-        box-shadow: variables.$shadow-box;
         padding: functions.rem(10) functions.rem(20);
-        margin-bottom: functions.rem(12);
-
+    
         h3 {
             font-size: 0.9rem;
         }
@@ -83,18 +79,22 @@
             margin-top: functions.rem(3);
             display: flex;
             justify-content: space-between;
+            overflow: hidden;
 
-            p {
-                display: contents;
 
-                span {
-                    display: block;
-                    font-weight: 900;
-                    font-size: 0.9rem;
-                    color: #4e4e4e; 
-                }
+            .recipe {
+                width: 80%;
+                display: block;
+            }
+            .price {
+                display: block;
+                font-weight: 900;
+                font-size: 0.9rem;
+                color: #4e4e4e; 
             }
         }
+
+        
     }
 }
 
@@ -106,27 +106,3 @@
 .btn_order {
     padding: 0.9375rem 2rem;
 }
-
-/* .heart--line2 {
-    position: absolute;
-    -webkit-text-stroke: 1px #fff;
-    bottom: functions.rem(3);
-}
-
-.heart--color2 {
-    opacity: 0;
-
-    &:hover {
-        opacity: 1;
-        background: linear-gradient(to top, variables.$secondary-color, variables.$primary-color);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: bold;
-        cursor: pointer;
-        animation: color;
-        animation-duration: 1s;
-        animation-delay: 0.3s;
-        animation-timing-function: linear;
-        animation-fill-mode: both;
-    }
-} */

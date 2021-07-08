@@ -3,13 +3,14 @@
 @use "../utilities/variables";
 @use "../base/placeholders";
 
+@use "sass:color";
+
 /*-----------------------------------*\
                                 HOME
 \*-----------------------------------*/
 /*------------------------*\
             HEADER
 \*------------------------*/
-
 .header_logo {
     font-size: 1.7rem;
     color: variables.$txt-logo;
@@ -18,7 +19,6 @@
 /*---------------------------*\
             SEARCH
 \*---------------------------*/
-
 .search {
     @include mixins.flex-center;
     flex-direction: column;
@@ -66,7 +66,6 @@
 /*---------------------------*\
             STEP BOX
 \*---------------------------*/
-
 .box-step {
     display: flex;
     flex-direction: column;
@@ -105,7 +104,7 @@
         background: variables.$primary-color;
         border-radius: functions.rem(20);
         color: variables.$txt-white;
-        font-size: 0.8rem;   
+        font-size: 0.8rem;
     }
 
     &_descr {
@@ -129,7 +128,6 @@
 /*---------------------------*\
             LOCATION
 \*---------------------------*/
-
 .location_container {
     @include mixins.flex-center;
     position: relative;
@@ -162,7 +160,6 @@
 /*------------------------------*\
             RESTAURANTS
 \*------------------------------*/
-
 .restaurants_title {
     padding-left: 1.25rem;
 }
@@ -179,6 +176,12 @@
     overflow: hidden;
     position: relative;
     margin: functions.rem(10) functions.rem(0);
+    transform: scale(1);
+    transition: transform 0.4s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 
     a {
         width: 100%;
@@ -197,7 +200,7 @@
             position: relative;
             top: -44px;
             width: 100%;
-            object-fit: cover;
+            object-fit: cover;   
         }
     }
 }
@@ -243,7 +246,6 @@
 /*------------------------------*\
             FOOTER
 \*------------------------------*/
-
 .footer_logo {
     @extend %typoShrikhand;
     font-size: 1.3rem;
