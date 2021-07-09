@@ -143,13 +143,7 @@
         margin: functions.rem(10) functions.rem(16);
 
         &_image img {
-            top: -90px;
-            filter: grayscale(1);
-            transition: filter 0.4s ease-in-out;   
-        }
-
-        &:hover .restaurant_image img {
-            filter: grayscale(0);
+            top: -90px;  
         }
     }
 
@@ -229,12 +223,6 @@
 
         &_image img {
             top: -15px;
-            filter: grayscale(1);
-            transition: filter 0.4s ease-in-out;   
-        }
-
-        &:hover .restaurant_image img {
-            filter: grayscale(0);
         }
 
         &--new {

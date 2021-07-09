@@ -189,19 +189,19 @@ $anim-delay: math.div($anim-duration, 3);
 }
 
 .meal_box:nth-child(2) {
-    animation: slide_box linear 851.644ms 1s backwards;
+    animation: slide_box linear 1s backwards;
   }
   
   .meal_box:nth-child(3) {
-    animation: slide_box linear 1054.24ms 1s backwards;
+    animation: slide_box linear 1s 0.2s backwards;
   }
   
   .meal_box:nth-child(4) {
-    animation: slide_box linear 1255.23ms 1s backwards;
+    animation: slide_box linear 1s 0.4s backwards;
   }
   
   .meal_box:nth-child(5) {
-    animation: slide_box linear 1455.23ms 1s backwards;
+    animation: slide_box linear 1s 0.6s backwards;
   }
 
   .box-check {
