@@ -98,10 +98,13 @@
         border-radius: functions.rem(20);
         color: variables.$txt-white;
         font-size: 0.8rem;
+        z-index: 2;
     }
 
     &_descr {
         display: flex;
+        position: relative;
+        z-index: 1;
         background: variables.$bg-grey-light;
         border-radius: functions.rem(15);
         width: 85vw;
@@ -112,19 +115,32 @@
         box-shadow: variables.$shadow-box;
         cursor: pointer;
 
-            &:hover {
-                background: lighten(variables.$primary-color, 35%);
+        &:hover {
+            &::after {
+            opacity: 1;
             }
+        }
 
-            i {
-                color: variables.$icon-step-color;
-                font-size: 1.2rem;
-                margin: functions.rem(0) functions.rem(20) functions.rem(0) functions.rem(25);
-            }
+        &::after {
+            content: "";
+            @include mixins.absolute-el(0, 0, 0, 0, 0, 0);
+            background: lighten(variables.$primary-color, 35%);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+            border-radius: functions.rem(15);
 
-            &:hover i {
-                color: variables.$primary-color;
-            }
+        }
+
+        i {
+            color: variables.$icon-step-color;
+            font-size: 1.2rem;
+            margin: functions.rem(0) functions.rem(20) functions.rem(0) functions.rem(25);
+        }
+
+        &:hover i {
+            color: variables.$primary-color;
+        }
     }
 
 }

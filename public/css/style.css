@@ -518,9 +518,12 @@ a {
   border-radius: 1.25rem;
   color: white;
   font-size: 0.8rem;
+  z-index: 2;
 }
 .step_descr {
   display: flex;
+  position: relative;
+  z-index: 1;
   background: #f6f6f6;
   border-radius: 0.9375rem;
   width: 85vw;
@@ -531,8 +534,22 @@ a {
   box-shadow: 0px 3px 15px 0px rgba(126, 126, 126, 0.3);
   cursor: pointer;
 }
-.step_descr:hover {
+.step_descr:hover::after {
+  opacity: 1;
+}
+.step_descr::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translate(0, 0);
   background: #f2eafb;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+  border-radius: 0.9375rem;
 }
 .step_descr i {
   color: #7e7e7e;
@@ -884,6 +901,10 @@ a {
 
   .step_numb {
     left: 2%;
+  }
+
+  .step_descr {
+    width: 25vw;
   }
 
   .restaurants_container {
